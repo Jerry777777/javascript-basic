@@ -1,4 +1,5 @@
 import EventEmitter from 'events';
+import { addListener } from 'process';
 
 describe('for event', () => {
   function waitForEvents() {
@@ -16,7 +17,7 @@ describe('for event', () => {
 
     // <--start
     // Please add the event listener to handle `click` event on `element`.
-
+    element.addListener('click', onClick);
     // --end->
 
     element.emit('click');
